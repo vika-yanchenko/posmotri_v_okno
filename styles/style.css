@@ -99,8 +99,8 @@ ol {
   min-width: 225px;
   background-color: transparent;
   border: none;
-  border-top: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   color: rgba(255, 255, 255, 0.70);
   font-family: Fira Sans Condensed;
   font-size: 18px;
@@ -111,6 +111,19 @@ ol {
   color: rgba(255, 255, 255, 0.7);
   font-family: Fira Sans Condensed;
   font-weight: 400;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:active {
+  outline: 1px solid #fff;
 }
 
 .search-form__checkbox-list {
@@ -125,12 +138,24 @@ ol {
   cursor: pointer;
 }
 
+.search-form__label:focus {
+  outline: none;
+}
+
+.search-form__label:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.search-form__label:has(.search-form__checkbox):hover {
+  text-decoration: underline;
+}
+
 .search-form__pseudo-checkbox {
   position: relative;
   display: block;
   width: 19px;
   height: 19px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
@@ -148,15 +173,32 @@ ol {
 
 .button {
   cursor: pointer;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding: 6px 0;
   background-color: transparent;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-family: Fira Sans Condensed, Arial, sans-serif;
   font-size: 18px;
   font-weight: 700;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
+  margin: 2px;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
 }
 
 .search-form__submit-button {
@@ -165,10 +207,7 @@ ol {
 }
 
 .content__details { 
-  display: flex;
-  flex-direction: column;
-  min-width: 398px;
-  gap: 26px;
+  min-width: 400px;
   inline-size: 100%;
   block-size: 100%;
 }
@@ -179,6 +218,7 @@ ol {
   font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
 .content__accent {
@@ -191,9 +231,10 @@ ol {
   overflow: auto;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 29px;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  padding-bottom: 1px;
 }
 
 .content__list::-webkit-scrollbar {
@@ -231,12 +272,34 @@ ol {
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
   color: #fff;
+  margin: 2px;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link_current:active {
+  background-color: #545050;
 }
 
 .more-button {
-  inline-size: 100%;
+  width: 98%;
 }
 
 
