@@ -294,10 +294,6 @@ ol {
   background-color: #545050;
 }
 
-.content__card-link_current:active {
-  background-color: #545050;
-}
-
 .more-button {
   width: 98%;
 }
