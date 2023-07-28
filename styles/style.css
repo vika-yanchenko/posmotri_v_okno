@@ -107,6 +107,12 @@ ol {
   font-weight: 400;
 }
 
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Fira Sans Condensed;
+  font-weight: 400;
+}
+
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
@@ -129,9 +135,14 @@ ol {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: '';
-  position: absolute;
+  position: relative;
   display: block;
-  inset: 1px;
+  width: 15px;
+  height: 15px;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
   background-color: #fff;
 }
 
@@ -156,7 +167,7 @@ ol {
 .content__details { 
   display: flex;
   flex-direction: column;
-  min-width: 400px;
+  min-width: 398px;
   gap: 26px;
   inline-size: 100%;
   block-size: 100%;
@@ -181,6 +192,13 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.content__list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .content__video-card {
